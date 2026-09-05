@@ -1,0 +1,188 @@
+/** @format */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: x-large;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  text-transform: capitalize;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --scienceblue: #1e88e5;
+  --biogreen: #43a047;
+  --chemorang: #fb8c00;
+  --text_1: #ffffff;
+  --text-muted: #cfc8ff;
+  --t2: #263238;
+  --t3: #eceff1;
+  --t4: #020617;
+}
+.gridecontainer {
+  display: grid;
+  grid-template-rows: 70px repeat(10, 150px);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
+    "nav nav nav nav nav "
+    " main main main main main "
+    " main main main main main "
+    " main main main main main "
+    " main main main main main "
+    " main main main main main "
+    " main main main main main "
+    " main main main main main "
+    " main main main main main "
+    " main main main main main ";
+  background-color: var(--t4);
+  max-width: 1280px;
+  gap: 15px;
+  height: auto;
+}
+/*============================================================ nav bar ====================*/
+.nav_bar {
+  grid-area: nav;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  border: solid 1px var(--t3);
+  background-color: #0206179a;
+  backdrop-filter: blur(5px);
+  width: auto;
+  max-width: 1280px;
+  margin-top: 7px;
+  margin-right: 120px;
+  margin-left: 120px;
+  position: fixed;
+  z-index: 100000;
+  display: flex;
+  padding-left: 5px;
+}
+.linkcontainer {
+  height: 65px;
+  display: flex;
+  width: 813px;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 5px;
+  padding-left: 37px;
+  margin-top: 1px;
+}
+
+h1 {
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    var(--biogreen),
+    var(--scienceblue)
+  );
+  -webkit-background-clip: text;
+  font-size: 50px;
+  font-weight: bold;
+  display: inline;
+  padding-left: 20px;
+}
+a {
+  color: var(--t3);
+  font-weight: bold;
+  transition: 0.5s;
+}
+.box {
+  margin-left: 20px;
+}
+.box a {
+  margin: 10px;
+  display: inline-block;
+}
+.linkcontainer a:hover {
+  text-shadow: 4px 1px 6px var(--scienceblue);
+}
+/* ---------------------moving line _---------------------- */
+#li_1::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  display: inline-block;
+  width: 0px;
+  height: 3px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to right,
+    var(--biogreen),
+    var(--scienceblue)
+  );
+}
+#li_2::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  display: inline-block;
+  width: 0px;
+  height: 3px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to right,
+    var(--biogreen),
+    var(--scienceblue)
+  );
+}
+#li_3::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  display: inline-block;
+  width: 0px;
+  height: 3px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to right,
+    var(--biogreen),
+    var(--scienceblue)
+  );
+}
+#li_4::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  display: inline-block;
+  width: 0px;
+  height: 3px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to right,
+    var(--biogreen),
+    var(--scienceblue)
+  );
+}
+
+#li_1:hover::before {
+  width: 68px;
+}
+#li_2:hover::before {
+  width: 131.75px;
+}
+#li_3:hover::before {
+  width: 122px;
+}
+#li_4:hover::before {
+  width: 147px;
+}
+/* ===============================main======================= */
